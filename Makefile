@@ -2,8 +2,8 @@ GO_BIN := $(shell which go)
 DOCKER_BIN := $(shell which docker)
 GO_LINT := $(shell which golint)
 IMAGE_PATH := ghcr.io/swallo/maintsrv
-PROJECT_NAME := "maintsrv"
-PKG := "swallo/maintsrv"
+PROJECT_NAME := maintsrv
+PKG := swallo/maintsrv
 PKG_LIST := $(shell go list ${PKG}/...)
 
 .PHONY: all dep build build-all clean test race lint release
