@@ -9,6 +9,9 @@ COPY . .
 RUN make build ARCH=$TARGETARCH
 
 FROM alpine:3.21
+LABEL maintainer="Sven Walloner <coding@walloner.de>"
+LABEL org.opencontainers.image.source="https://github.com/SWallo/maintsrv" 
+
 RUN apk --no-cache add ca-certificates tzdata wget
 
 ARG TARGETARCH
